@@ -4,6 +4,7 @@ import Navbar from "../components/navbar/Navbar"
 import Home from "../components/Home/Home"
 import SingleProduct from '../components/SingleProduct'
 import Cart from '../components/Cart'
+import Shop from '../components/Shop'
 function Routing() {
   return (
     <div>
@@ -12,6 +13,7 @@ function Routing() {
             <Route path='/' element={<Home/>}/>
             <Route path='/SingleProduct/:id' element={<SingleProduct/>}/>
             <Route path='/cart' element={<Cart/>}/>
+            <Route path='/Shop' element={<Shop/>}/>
         </Routes>
       
     </div>

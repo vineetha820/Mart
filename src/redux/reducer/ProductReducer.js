@@ -1,6 +1,8 @@
 
   const initialState = {
     products: [],
+    selectedContent:"sofa",
+    searchProduct:'',
     cartData: JSON.parse(localStorage.getItem('cartData')) || [],
   };
   
@@ -58,6 +60,16 @@
         return {
           ...state,
           cartData: [...state.cartData],
+        };
+      case "SELECT_CONTENT":
+        return {
+          ...state,
+          selectedContent: action.payload,
+        };
+      case "SEARCH_PRODUCT":
+        return {
+          ...state,
+          searchProduct: action.payload,
         };
   
       default:
